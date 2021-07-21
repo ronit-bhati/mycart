@@ -1,0 +1,72 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'shop/css/style-prodView.css' %}"> {% endblock css %}
+{% block title %}{{product.product_name}}{% endblock title %}
+
+{% block body %}
+<div class="container my-4">
+	<div id="carouselExampleIndicators" class="carousel slide mb-3" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="d-flex justify-content-center w-100">
+					<img src="/media/{{product.image1}}" class="productImage d-block" alt="product image">
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="d-flex justify-content-center w-100">
+					<img src="/media/{{product.image2}}" class="productImage d-block" alt="product image">
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="d-flex justify-content-center w-100">
+					<img src="/media/{{product.image3}}" class="productImage d-block" alt="product image">
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="d-flex justify-content-center w-100">
+					<img src="/media/{{product.image4}}" class="productImage d-block" alt="product image">
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="d-flex justify-content-center w-100">
+					<img src="/media/{{product.image5}}" class="productImage d-block" alt="product image">
+				</div>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+	<div>
+		<aside class="aside-buttons">
+			<div class="p-3 mb-3">
+				<button class="btn btn-warning mx-4 my-4">Buy Now</button>
+					<button class="btn btn-warning">Add To Cart</button>
+			</div>
+		</aside>
+	</div>
+	<div class="col-md-8">
+		<div class="card-body">
+			<h2 class="product-title">{{product.product_name}}</h5>
+				<h5 class="font-italic">MRP Rs. {{product.price}}</h5>
+		</div>
+		<div class="card-body border-top border-bottom">
+			<h3 class="desc-heading">Description</h3>
+			<p class="desc">{{product.desc}}</p>
+		</div>
+	</div>
+</div>
+{% endblock body %}

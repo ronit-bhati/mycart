@@ -1,0 +1,61 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}{{post.title}}{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'blog/css/style-blogspot.css' %}"> {% endblock css %}
+
+{% block body %}
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-8 blog-main">
+            <h3 class="font-italic">
+                {{post.title}}
+            </h3>
+            <p class="blog-post-meta publisher">{{post.pub_date}} by <a href="#">{{post.writer}}</a></p>
+            <p class="pb-3 mb-4 border-bottom pre-line-white-space">{{post.ctitle}}</p>
+
+            <div class="blog-post">
+                <h2 class="blog-post-title">{{post.head0}}</h2>
+                <p class="pre-line-white-space">{{post.chead0}}</p><br>
+                <h2>{{post.head1}}</h2>
+                <p class="pre-line-white-space">{{post.chead1}}</p><br>
+                <h2>{{post.head2}}</h2>
+                <p class="border-bottom mb-4 pb-4 pre-line-white-space">{{post.chead2}}</p>
+                <div class="fb-comments my-4" data-href="http://127.0.0:8000/blog/blogpost/{{post.post_id}}"
+                    data-width="" data-numposts="5"></div>
+
+            </div><!-- /.blog-post -->
+
+        </div><!-- /.blog-main -->
+
+        <aside class="col-md-4 blog-sidebar">
+            <div>
+                <img src="/media/{{post.thumbnail}}" class="bd-placeholder-img my-4"
+                    aria-label="Placeholder: Thumbnail">
+            </div>
+            <div class="p-3 mb-3 bg-light rounded">
+                <h4 class="font-italic">About</h4>
+                <p class="mb-0">MyCart <em>is an e-commerce website</em> you can search and buy the products you want.
+                    We give a variety of products for the buyers.</p>
+            </div>
+
+            <div class="p-3">
+                <h4 class="font-italic">Contact us on</h4>
+                <ol class="list-unstyled">
+                    <li><a href="https://github.com/ronit-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                    <li><a href="https://twitter.com/ronit_bhati_" target="_blank" rel="noopener noreferrer">Twitter</a>
+                    </li>
+                    <li><a href="https://www.instagram.com/ronit_bhati_" target="_blank"
+                            rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/ronit.bhati.9235/" target="_blank"
+                            rel="noopener noreferrer">Facebook</a></li>
+                </ol>
+                <div class="fb-like mt-4" data-href="http://127.0.0:8000/blog/blogpost/{{post.post_id}}" data-width=""
+                    data-layout="box_count" data-action="like" data-size="large" data-share="true"></div>
+            </div>
+        </aside><!-- /.blog-sidebar -->
+
+    </div>
+</div>
+{% endblock body %}

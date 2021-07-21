@@ -1,0 +1,43 @@
+.productImage{
+	height: 60vh;
+}
+
+.carousel-item{
+	height: 60vh;
+}
+
+.carousel-item{
+	background-color: whitesmoke;
+}
+
+.carousel-control-next-icon{
+	background-color: blue;
+}
+
+.carousel-control-prev-icon{
+	background-color: blue;
+}
+
+.desc{
+	white-space: pre-line;
+}
+
+.desc-heading{
+	font-weight: 700;
+}
+
+.product-title{
+	font-weight: 600;
+}
+
+.aside-buttons{
+	float: right;
+}
+
+.carousel-indicators .active {
+    background-color: blue;
+}
+
+body .carousel-indicators {
+    bottom: -32px;
+}

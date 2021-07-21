@@ -1,0 +1,57 @@
+.container {
+    overflow-x: hidden;
+}
+
+.col-md-3 {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.carousel-indicators .active {
+    background-color: blue;
+}
+
+.col-md-3 img {
+    width: 240px;
+    height: 190px;
+}
+
+body .carousel-indicator li {
+    background-color: blue;
+}
+
+.carousel-indicators li {
+    background-color: #fa9a9a;
+}
+
+body .carousel-indicators {
+    bottom: -32px;
+}
+
+body .carousel-control-prev {
+    padding-top: 202px;
+}
+
+body .carousel-control-next {
+    padding-top: 202px;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon {
+    background-color: blue;
+}
+
+body .carousel-control-prev,
+body .carousel-control-next {
+    top: auto;
+    bottom: auto;
+}
+
+body .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.carousel-item-active{
+    background-color: whitesmoke;
+}

@@ -1,0 +1,67 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'shop/css/style-index.css' %}"> {% endblock css %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="container">
+
+     <!-- SlideShow starting here -->
+     {% for product, range, nSlide in allProds %}
+     <h2 class="my-4">Category - {{product.0.category}} - Recommended items</h2>
+     <div class="row">
+          <div class="col carousel slide my-3" id="demo{{forloop.counter}}" data-ride="carousel">
+               <ul class="carousel-indicators">
+                    <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
+                    {% for i in range %}
+                    <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}"></li>
+                    {% endfor %}
+               </ul>
+
+               <div class="container" carousel-inner no-padding>
+                    <div class="carousel-item active">
+
+                         {% for i in product %}
+                         <div class="product-display-carousel col-xs-3 col-sm-3 col-md-3">
+                              <div class="card align-items-center" style="width: 18rem;">
+                                   <img class="mt-2" src="/media/{{i.image1}}" alt="...">
+                                   <div class="card-body">
+                                        <h5 class="card-title font-weight-bold" id="namepr{{i.id}}">{{i.product_name|slice:"0:35"}}...
+                                        </h5>
+                                        <p class="font-italic">MRP Rs. <span id="pricepr{{i.id}}">{{i.price}}</span></p>
+                                        <p class="card-text">{{i.desc|slice:"0:80"}}...</p>
+                                        <span id="divpr{{i.id}}" class="divpr">
+                                             <button id="pr{{i.id}}" class="btn btn-warning cart">Add To Cart</button>
+                                        </span>
+                                        <a href="products/{{i.id}}"><button id="qv{{i.id}}" class="btn btn-warning">View
+                                                  Product</button></a>
+                                   </div>
+                              </div>
+                         </div>
+                         {% if forloop.counter|divisibleby:4 and forloop.counter > 0 and not forloop.last %}
+                    </div>
+                    <div class="carousel-item">
+                         {% endif %}
+
+                         {% endfor %}
+                    </div>
+               </div>
+          </div>
+
+          <!-- Left and right controls for the slide -->
+          <a class="carousel-control-prev" href="#demo{{forloop.counter}}" data-slide="prev">
+               <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo{{forloop.counter}}" data-slide="next">
+               <span class="carousel-control-next-icon"></span>
+          </a>
+     </div>
+     {% endfor %}
+</div>
+
+{% endblock body %}
+
+{% block js %}
+<script src="{% static 'shop/js/cart.js' %}"></script>
+{% endblock js %}

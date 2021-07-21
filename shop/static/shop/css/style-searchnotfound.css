@@ -1,0 +1,9 @@
+body{
+    background-color: whitesmoke;
+}
+
+body .container-fluid{
+    height: 82vh;
+    width: 96.5vw;
+    background-color: white;
+}

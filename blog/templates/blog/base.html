@@ -1,0 +1,94 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="icon" href="{% static 'shop/images/favicon.ico' %}">
+    {% block css %}{% endblock css %}
+    <link rel="stylesheet" href="{% static 'blog/css/style-base.css' %}">
+
+
+    <title>{% block title %}{% endblock title %} - MyCart Blog</title>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"
+        nonce="HkRLS3iV"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">MyCart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/blog">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop/contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">Shop</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block body %}
+    {% endblock body %}
+
+    <footer class="bg-dark mt-5">
+        <div class="container footer pb-4 pt-5">
+            <div class="row">
+                <div class="col-sm border-right">
+                    <p><b>Links below:</b></p>
+                    <p><a href="/blog">MyCart Blog</a></p>
+                    <p><a href="/shop/about">About Us</a></p>
+                    <p><a href="/shop/contact">Contact Us</a></p>
+                </div>
+                <div class="col-sm border-right">
+                    <p><b>Continue your shopping:</b></p>
+                    <p><a href="/shop/">Home</a></p>
+                    <p><a href="/shop/tracker">Order Tracker</a></p>
+                    <p><a href="/shop/checkout">Checkout</a></p>
+                </div>
+                <div class="col-sm">
+                    <p><b>Recommended Blogs:</b></p>
+                    <p><a href="/blog/blogpost/1">What is Coding?</a></p>
+                    <p><a href="/blog/blogpost/5">What is Python?</a></p>
+                    <p><a href="/blog/blogpost/4">What is Django?</a></p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center pt-5">
+                <b>Copyright &#169; MyCart.com and its affiliates</b>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    {% block js %}{% endblock js %}
+
+</body>
+
+</html>

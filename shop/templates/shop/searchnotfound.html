@@ -1,0 +1,22 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'shop/css/style-searchnotfound.css' %}"> {% endblock css %}
+{% block title %}Search Result{% endblock title %}
+
+{% block body %}
+<div class="container-fluid mx-4 my-4 d-flex align-items-center justify-content-center flex-column">
+    <p class="d-flex justify-content-center"><img class="success-image" src="{% static 'shop/images/noresult.png' %}">
+    </p>
+    <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">Oops!</h4>
+        <p>We found nothing related to your search. Make sure that you entered the right name for the product or search something else.</p>
+        <hr>
+        <p class="mb-0">No search result found.</p>
+    </div>
+</div>
+{% endblock body %}
+
+{% block js %}
+<script src="{% static 'shop/js/cart.js' %}"></script>
+{% endblock js %}
