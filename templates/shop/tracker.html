@@ -1,8 +1,9 @@
-{% extends 'shop/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'shop/css/style-tracker.css' %}"> {% endblock css %}
 {% block title %}Order Tracker{% endblock title %}
+{% block trackeractive %} active {% endblock trackeractive %}
 
 {% block body %}
 <div class="container">

@@ -1,8 +1,9 @@
-{% extends 'shop/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'shop/css/style-index.css' %}"> {% endblock css %}
 {% block title %}Home{% endblock title %}
+{% block homeactive %} active {% endblock homeactive %}
 
 {% block body %}
 <div class="container">
