@@ -1,3 +1,7 @@
+.master-container{
+    min-height: 61vh;
+}
+
 footer{
     height: 320px;
 }
