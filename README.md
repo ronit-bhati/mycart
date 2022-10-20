@@ -9,5 +9,5 @@ You can go through the website, it is very big.
 Hope you will enjoy seeing my website.
 
 For any queries:
-instagram: @ronit_bhati_ |
+
 email: ronitbhati.786@gmail.com
