@@ -1,9 +1,8 @@
 /blog/__pycache__
 /blog/migrations/__pycache__
 /mycart/__pycache__
-/paytm/__pycache__
 /shop/__pycache__
 /shop/migrations/__pycache__
 /MyCart/__pycache__
 MyCartENV/
-.vscode
+.idea/
