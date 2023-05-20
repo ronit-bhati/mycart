@@ -1,6 +1,6 @@
 # mycart
 This is an prototype of an e-commerce website.
-This was made as a practice of django by me.
+This was made as a practice project for django by me.
 Almost all the frontend is made using bootstrap because main focus was on django.
 This is a fully working website.
 This have basic functions like search bar and other stuff integrated to complex functions like facebook comment and like integration, paytm payment integration and order tracker.
